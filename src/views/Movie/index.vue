@@ -5,7 +5,7 @@
         <div class="movie_menu">
           <router-link to="/movie/city" custom v-slot="{ navigate,isActive,isExactActive }">
               <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="city_name" @click="navigate">
-                <span>大连</span><i class="iconfont icon-lower-triangle"></i>
+                <span>哈尔滨</span><i class="iconfont icon-lower-triangle"></i>
               </div>
             </router-link>
           <div class="hot_swtich">

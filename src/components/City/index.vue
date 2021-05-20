@@ -4,14 +4,14 @@
             <div class="city_hot">
                 <h2>热门城市</h2>
                 <ul class="clearfix">
-                    <li>上海</li>
                     <li>北京</li>
                     <li>上海</li>
-                    <li>北京</li>
-                    <li>上海</li>
-                    <li>北京</li>
-                    <li>上海</li>
-                    <li>北京</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                    <li>海口</li>
+                    <li>香港</li>
+                    <li>澳门</li>
+                    <li>台湾</li>
                 </ul>
             </div>
             <div class="city_sort">
@@ -34,39 +34,37 @@
                     </ul>
                 </div>
                 <div>
-                    <h2>A</h2>
+                    <h2>C</h2>
                     <ul>
-                        <li>阿拉善盟</li>
-                        <li>鞍山</li>
-                        <li>安庆</li>
-                        <li>安阳</li>
+                        <li>重庆</li>
+                        <li>成都</li>
+                        <li>长沙</li>
+                        <li>滁州</li>
                     </ul>
                 </div>
                 <div>
-                    <h2>B</h2>
+                    <h2>D</h2>
                     <ul>
-                        <li>北京</li>
-                        <li>保定</li>
-                        <li>蚌埠</li>
-                        <li>包头</li>
+                        <li>大庆</li>
+                        <li>大连</li>
+                        <li>东莞</li>
+                        <li>敦煌</li>
                     </ul>
                 </div>
                 <div>
-                    <h2>A</h2>
+                    <h2>E</h2>
                     <ul>
-                        <li>阿拉善盟</li>
-                        <li>鞍山</li>
-                        <li>安庆</li>
-                        <li>安阳</li>
+                        <li>鄂尔多斯</li>
+                        <li>鄂州</li>
                     </ul>
                 </div>
                 <div>
-                    <h2>B</h2>
+                    <h2>F</h2>
                     <ul>
-                        <li>北京</li>
-                        <li>保定</li>
-                        <li>蚌埠</li>
-                        <li>包头</li>
+                        <li>福州</li>
+                        <li>佛山</li>
+                        <li>抚顺</li>
+                        <li>阜阳</li>
                     </ul>
                 </div>	
             </div>
@@ -78,6 +76,7 @@
                 <li>C</li>
                 <li>D</li>
                 <li>E</li>
+                <li>F</li>
             </ul>
         </div>
     </div>
