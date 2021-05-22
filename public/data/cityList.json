@@ -1,0 +1,265 @@
+{
+    "msg": "ok",
+    "status": 0,
+    "data": {
+        "cities": [{
+                "id": 1,
+                "nm": "北京",
+                "isHot": 1,
+                "py": "beijing"
+            },
+            {
+                "id": 10,
+                "nm": "上海",
+                "isHot": 1,
+                "py": "shanghai"
+            },
+            {
+                "id": 20,
+                "nm": "广州",
+                "isHot": 1,
+                "py": "guangzhou"
+            },
+            {
+                "id": 30,
+                "nm": "深圳",
+                "isHot": 0,
+                "py": "shenzhen"
+            },
+            {
+                "id": 42,
+                "nm": "西安",
+                "isHot": 0,
+                "py": "xian"
+            },
+            {
+                "id": 40,
+                "nm": "天津",
+                "isHot": 1,
+                "py": "tianjin"
+            },
+            {
+                "id": 50,
+                "nm": "杭州",
+                "isHot": 1,
+                "py": "hangzhou"
+            },
+            {
+                "id": 55,
+                "nm": "南京",
+                "isHot": 1,
+                "py": "nanjing"
+            },
+            {
+                "id": 56,
+                "nm": "合肥",
+                "isHot": 0,
+                "py": "hefei"
+            },
+            {
+                "id": 59,
+                "nm": "成都",
+                "isHot": 1,
+                "py": "chengdu"
+            },
+            {
+                "id": 84,
+                "nm": "保定",
+                "isHot": 0,
+                "py": "baoding"
+            },
+            {
+                "id": 88,
+                "nm": "蚌埠",
+                "isHot": 0,
+                "py": "bengbu"
+            },
+            {
+                "id": 94,
+                "nm": "海口",
+                "isHot": 0,
+                "py": "haikou"
+            },
+            {
+                "id": 95,
+                "nm": "葫芦岛",
+                "isHot": 0,
+                "py": "huludao"
+            },
+            {
+                "id": 105,
+                "nm": "哈尔滨",
+                "isHot": 0,
+                "py": "haerbin"
+            },
+            {
+                "id": 123,
+                "nm": "邯郸",
+                "isHot": 0,
+                "py": "handan"
+            },
+            {
+                "id": 128,
+                "nm": "衡水",
+                "isHot": 0,
+                "py": "hengshui"
+            },
+            {
+                "id": 139,
+                "nm": "呼和浩特",
+                "isHot": 0,
+                "py": "huhehaote"
+            },
+            {
+                "id": 140,
+                "nm": "包头",
+                "isHot": 0,
+                "py": "baotou"
+            },
+            {
+                "id": 145,
+                "nm": "呼伦贝尔",
+                "isHot": 0,
+                "py": "hulunbeier"
+            },
+            {
+                "id": 146,
+                "nm": "巴彦卓尔",
+                "isHot": 0,
+                "py": "bayanzhuoer"
+            },
+            {
+                "id": 153,
+                "nm": "本溪",
+                "isHot": 0,
+                "py": "benxi"
+            },
+            {
+                "id": 165,
+                "nm": "白山",
+                "isHot": 0,
+                "py": "baishan"
+            },
+            {
+                "id": 167,
+                "nm": "白城",
+                "isHot": 0,
+                "py": "baicheng"
+            },
+            {
+                "id": 170,
+                "nm": "鹤岗",
+                "isHot": 0,
+                "py": "hegang"
+            },
+            {
+                "id": 176,
+                "nm": "黑河",
+                "isHot": 0,
+                "py": "heihe"
+            },
+            {
+                "id": 180,
+                "nm": "淮安",
+                "isHot": 0,
+                "py": "huaian"
+            },
+            {
+                "id": 186,
+                "nm": "湖州",
+                "isHot": 0,
+                "py": "huzhou"
+            },
+            {
+                "id": 193,
+                "nm": "淮南",
+                "isHot": 0,
+                "py": "huainan"
+            },
+            {
+                "id": 195,
+                "nm": "淮北",
+                "isHot": 0,
+                "py": "huaibei"
+            },
+            {
+                "id": 198,
+                "nm": "黄山",
+                "isHot": 0,
+                "py": "huangshan"
+            },
+            {
+                "id": 204,
+                "nm": "亳州",
+                "isHot": 0,
+                "py": "bozhou"
+            },
+            {
+                "id": 233,
+                "nm": "滨州",
+                "isHot": 0,
+                "py": "binzhou"
+            },
+            {
+                "id": 292,
+                "nm": "北海",
+                "isHot": 0,
+                "py": "beihai"
+            },
+            {
+                "id": 297,
+                "nm": "百色",
+                "isHot": 0,
+                "py": "baise"
+            },
+            {
+                "id": 317,
+                "nm": "巴中",
+                "isHot": 0,
+                "py": "bazhong"
+            },
+            {
+                "id": 327,
+                "nm": "毕节",
+                "isHot": 0,
+                "py": "bijie"
+            },
+            {
+                "id": 332,
+                "nm": "保山",
+                "isHot": 0,
+                "py": "baoshan"
+            },
+            {
+                "id": 353,
+                "nm": "宝鸡",
+                "isHot": 0,
+                "py": "baoji"
+            },
+            {
+                "id": 363,
+                "nm": "白银",
+                "isHot": 0,
+                "py": "baiyin"
+            },
+            {
+                "id": 392,
+                "nm": "博尔塔拉",
+                "isHot": 0,
+                "py": "boertala"
+            },
+            {
+                "id": 393,
+                "nm": "巴州",
+                "isHot": 0,
+                "py": "bazhou"
+            },
+            {
+                "id": 533,
+                "nm": "滨海",
+                "isHot": 0,
+                "py": "binhai"
+            }
+        ]
+    }
+}

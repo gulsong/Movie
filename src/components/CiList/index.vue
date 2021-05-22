@@ -2,88 +2,17 @@
     <div class="cinema_b">
         <div class="cinema_body">
             <ul>
-                <li>
+                <li v-for="item in cinemaList" :key="item.id">
                     <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
+                        <span>{{item.nm}}</span>
+                        <span class="q"><span class="price">{{item.sellPrice}}</span> 元起</span>
                     </div>
                     <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
+                        <span>{{item.addr}}</span>
+                        <span>{{item.distance}}</span>
                     </div>
                     <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>嘉星国际影城(会展店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>南岗区红旗大街240号(艺汇家文化商业广场3楼)</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
+                        <div v-for="(num,key) in item.tag" :key="key" :class="classCard(key)"><div v-if="num===1||key==='vipTag'">{{formatCard(key)}}</div></div>
                     </div>
                 </li>
             </ul>
@@ -93,7 +22,64 @@
 
 <script>
 export default {
-    name:'CiList'
+    name:'CiList',
+    data(){
+        return{
+            cinemaList:[]
+        }
+    },
+    mounted(){
+        this.$axios.get('/api/cinemaList?cityId=10').then((res)=>{
+            var msg=res.data.msg;
+            if(msg==='ok'){
+                this.cinemaList=res.data.data.cinemas;
+            }
+        })
+    },
+    computed:{
+        formatCard(){
+            return (value) =>
+            {
+                var card = [
+                    {key:"allowRefund",value:'允许退款'},
+                    {key:"buyout",value:'购票'},
+                    {key:"cityCardTag",value:'城市卡'},
+                    {key:"deal",value:'交易'},
+                    {key:"endorse",value:'转让'},
+                    {key:"sell",value:'出售'},
+                    {key:"snack",value:'小吃'},
+                    {key:"vipTag",value:'折扣卡'},
+                ];
+                for(var i=0;i<card.length;i++){
+                    if(card[i].key===value){
+                        return card[i].value;
+                    }
+                }
+                return '';
+            }
+        },
+        classCard(){
+            return (value) =>
+            {
+                var card = [
+                    {key:"allowRefund",value:'bl'},
+                    {key:"buyout",value:'bl'},
+                    {key:"cityCardTag",value:'bl'},
+                    {key:"deal",value:'bl'},
+                    {key:"endorse",value:'bl'},
+                    {key:"sell",value:'bl'},
+                    {key:"snack",value:'or'},
+                    {key:"vipTag",value:'or'},
+                ];
+                for(var i=0;i<card.length;i++){
+                    if(card[i].key===value){
+                        return card[i].value;
+                    }
+                }
+                return '';
+            }
+        }
+    }
 }
 </script>
 
@@ -108,7 +94,7 @@ export default {
     .cinema_body .address{ font-size: 13px; color:#666;}
     .cinema_body .address span:nth-of-type(2){ float:right; }
     .cinema_body .card{ display: flex;}
-    .cinema_body .card div{ padding: 0 3px; height: 15px; line-height: 15px; border-radius: 2px; color: #f90; border: 1px solid #f90; font-size: 13px; margin-right: 5px;}
-    .cinema_body .card div.or{ color: #f90; border: 1px solid #f90;}
-    .cinema_body .card div.bl{ color: #589daf; border: 1px solid #589daf;}
+    .cinema_body .card div div{ padding: 0 3px; height: 15px; line-height: 15px; border-radius: 2px; color: #f90; border: 1px solid #f90; font-size: 13px; margin-right: 5px;}
+    .cinema_body .card div.or div{ color: #f90; border: 1px solid #f90;}
+    .cinema_body .card div.bl div{ color: #589daf; border: 1px solid #589daf;}
 </style>
