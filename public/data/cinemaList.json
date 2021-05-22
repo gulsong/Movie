@@ -1,0 +1,190 @@
+{
+    "msg": "ok",
+    "status": 0,
+    "data": {
+        "cinemas": [{
+                "id": 17158,
+                "mark": 0,
+                "nm": "JIA(嘉莱影城九亭店)",
+                "sellPrice": "18",
+                "addr": "松江区地铁九号线九亭站地铁二号口内（地下一层）",
+                "distance": "1071km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallTypeVOList": [],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减10元"
+                }
+            },
+            {
+                "id": 16620,
+                "mark": 0,
+                "nm": "星轶IMAX影城(九亭U天地旗舰店)",
+                "sellPrice": "18",
+                "addr": "松江区九亭镇蒲汇路178弄九亭U天地2楼",
+                "distance": "1071.2km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallType": [
+                        "IMAX厅",
+                        "杜比全景声厅",
+                        "DTS:X 临境音厅"
+                    ],
+                    "hallTypeVOList": [{
+                            "name": "IMAX厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "杜比全景声厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "DTS:X 临境音厅",
+                            "url": ""
+                        }
+                    ],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减2元"
+                }
+            },
+            {
+                "id": 70000,
+                "mark": 0,
+                "nm": "JIA(嘉莱影城九亭店)[test]",
+                "sellPrice": "18",
+                "addr": "松江区地铁九号线九亭站地铁二号口内（地下一层）",
+                "distance": "1071km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallTypeVOList": [],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减10元"
+                }
+            },
+            {
+                "id": 70001,
+                "mark": 0,
+                "nm": "星轶IMAX影城(九亭U天地旗舰店)[test]",
+                "sellPrice": "18",
+                "addr": "松江区九亭镇蒲汇路178弄九亭U天地2楼",
+                "distance": "1071.2km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallType": [
+                        "IMAX厅",
+                        "杜比全景声厅",
+                        "DTS:X 临境音厅"
+                    ],
+                    "hallTypeVOList": [{
+                            "name": "IMAX厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "杜比全景声厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "DTS:X 临境音厅",
+                            "url": ""
+                        }
+                    ],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减2元"
+                }
+            },
+            {
+                "id": 70002,
+                "mark": 0,
+                "nm": "JIA(嘉莱影城九亭店)[test]",
+                "sellPrice": "18",
+                "addr": "松江区地铁九号线九亭站地铁二号口内（地下一层）",
+                "distance": "1071km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallTypeVOList": [],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减10元"
+                }
+            },
+            {
+                "id": 70003,
+                "mark": 0,
+                "nm": "星轶IMAX影城(九亭U天地旗舰店)[test]",
+                "sellPrice": "18",
+                "addr": "松江区九亭镇蒲汇路178弄九亭U天地2楼",
+                "distance": "1071.2km",
+                "tag": {
+                    "allowRefund": 1,
+                    "buyout": 0,
+                    "cityCardTag": 0,
+                    "deal": 0,
+                    "endorse": 1,
+                    "hallType": [
+                        "IMAX厅",
+                        "杜比全景声厅",
+                        "DTS:X 临境音厅"
+                    ],
+                    "hallTypeVOList": [{
+                            "name": "IMAX厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "杜比全景声厅",
+                            "url": ""
+                        },
+                        {
+                            "name": "DTS:X 临境音厅",
+                            "url": ""
+                        }
+                    ],
+                    "sell": 1,
+                    "snack": 1,
+                    "vipTag": "折扣卡"
+                },
+                "promotion": {
+                    "cardPromotionTag": "开卡特惠，首单2张立减2元"
+                }
+            }
+        ]
+    }
+}
