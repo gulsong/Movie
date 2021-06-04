@@ -1,24 +1,30 @@
 <template>
-    <div class="search_body">
-        <div class="search_input">
-            <div class="search_input_wrapper">
-                <i class="iconfont icon-sousuo"></i>
-                <input type="text" v-model="message">
-            </div>					
-        </div>
-        <div class="search_result">
-            <h3>电影/电视剧/综艺</h3>
-            <ul>
-                <li v-for="item in moviesList" :key="item.id">
-                    <div class="img"><img :src="$filters.setWH(item.img,'128.180')"></div>
-                    <div class="info">
-                        <p><span>{{item.nm}}</span><span>{{item.sc}}</span></p>
-                        <p>{{item.enm}}</p>
-                        <p>{{item.cat}}</p>
-                        <p>{{item.rt}}</p>
+    <div class="search_b">
+        <div class="search_body">
+            <Scroller>
+                <div>
+                    <div class="search_input">
+                        <div class="search_input_wrapper">
+                            <i class="iconfont icon-sousuo"></i>
+                            <input type="text" v-model="message">
+                        </div>					
                     </div>
-                </li>
-            </ul>
+                    <div class="search_result">
+                        <h3>电影/电视剧/综艺</h3>
+                        <ul>
+                            <li v-for="item in moviesList" :key="item.id">
+                                <div class="img"><img :src="$filters.setWH(item.img,'128.180')"></div>
+                                <div class="info">
+                                    <p><span>{{item.nm}}</span><span>{{item.sc}}</span></p>
+                                    <p>{{item.enm}}</p>
+                                    <p>{{item.cat}}</p>
+                                    <p>{{item.rt}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </Scroller>
         </div>
     </div>
 </template>
@@ -42,8 +48,9 @@ export default {
     watch:{
         message(newVal){
             var that=this;
+            var cityId=this.$store.state.city.id;
             this.cancelRequest();
-            this.$axios.get('/api/searchList?cityId=10&kw='+newVal,{
+            this.$axios.get('/api/searchList?cityId='+cityId+'&kw='+newVal,{
                 cancelToken:new this.$axios.CancelToken(function(c){
                     that.source=c;
                 })
@@ -67,6 +74,7 @@ export default {
 </script>
 
 <style scoped>
+    #content .search_b{ margin-top: 45px; display: flex; width:100%; position: absolute; top: 50px; bottom: 50px;}
     #content .search_body{ flex:1; overflow:auto;}
     .search_body .search_input{ padding: 8px 10px; background-color: #f5f5f5; border-bottom: 1px solid #e5e5e5;}
     .search_body .search_input_wrapper{ padding: 0 10px; border: 1px solid #e6e6e6; border-radius: 5px; background-color: #fff; display: flex; line-height: 20px;}
