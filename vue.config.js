@@ -36,6 +36,13 @@ module.exports = {
                     '^/api/cinemaList': '/data/cinemaList.json'
                 }
             },
+            '/api/getLocation': {
+                target: 'http://localhost:8080',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api/getLocation': '/data/getLocation.json'
+                }
+            },
             '/api': {
                 target: 'http://39.97.33.178',
                 changeOrigin: true

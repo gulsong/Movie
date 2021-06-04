@@ -2,19 +2,19 @@
 <footer id="footer">
     <ul>
         <router-link to="/movie" custom v-slot="{ navigate,isActive,isExactActive }">
-            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @click="navigate">
+            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @touchstart="navigate">
                 <i class="iconfont icon-dianying"></i>
                 <p>电影</p>
             </li>
         </router-link>
         <router-link to="/cinema" custom v-slot="{ navigate,isActive,isExactActive }">
-            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @click="navigate">
+            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @touchstart="navigate">
                 <i class="iconfont icon-yingyuan"></i>
                 <p>影院</p>
             </li>
         </router-link>
         <router-link to="/mine" custom v-slot="{ navigate,isActive,isExactActive }">
-            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @click="navigate">
+            <li :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" @touchstart="navigate">
                 <i class="iconfont icon-wode"></i>
                 <p>我的</p>
             </li>

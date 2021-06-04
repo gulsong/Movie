@@ -1,20 +1,26 @@
 <template>
     <div class="movie_b">
         <div class="movie_body">
-            <ul>
-                <li v-for="item in comingList" :key="item.id">
-                    <div class="pic_show"><img :src="$filters.setWH(item.img,'128.180')"></div>
-                    <div class="info_list">
-                        <h2>{{item.nm}} <img v-if="item.version" src="@/assets/maxs.png" alt=""></h2>
-                        <p><span class="person">{{item.wish}}</span> 人想看</p>
-                        <p>主演: {{item.star}}</p>
-                        <p>{{item.rt}}上映</p>
-                    </div>
-                    <div class="btn_pre">
-                        预售
-                    </div>
-                </li>
-            </ul>
+            <Loading v-if="isLoading"/>
+            <Scroller v-else :handleToScroll="handleToScroll" :handleToTouchEnd="handleToTouchEnd">
+                <ul>
+                    <li class="pullDown">
+                        <p>{{pullDownMsg}}</p>
+                    </li>
+                    <li v-for="item in comingList" :key="item.id">
+                        <div class="pic_show" @tap="handleToDetail"><img :src="$filters.setWH(item.img,'128.180')"></div>
+                        <div class="info_list">
+                            <h2>{{item.nm}} <img v-if="item.version" src="@/assets/maxs.png" alt=""></h2>
+                            <p><span class="person">{{item.wish}}</span> 人想看</p>
+                            <p>主演: {{item.star}}</p>
+                            <p>{{item.rt}}上映</p>
+                        </div>
+                        <div class="btn_pre">
+                            预售
+                        </div>
+                    </li>
+                </ul>
+            </Scroller>
         </div>
     </div>
 </template>
@@ -24,16 +30,50 @@ export default {
     name:'ComingSoon',
     data(){
         return{
-            comingList:[]
+            comingList:[],
+            pullDownMsg:'',
+            isLoading:true,
+            prevCityId:-1
         }
     },
-    mounted(){
-        this.$axios.get('/api/movieComingList?cityId=10').then((res)=>{
+    activated(){
+        var cityId=this.$store.state.city.id;
+        if(this.prevCityId===cityId){
+            return;
+        }
+        this.isLoading=true;
+        this.$axios.get('/api/movieComingList?cityId='+cityId).then((res)=>{
             var msg=res.data.msg;
             if(msg==='ok'){
                 this.comingList=res.data.data.comingList;
+                this.isLoading=false;
+                this.prevCityId=cityId;
             }
         })
+    },
+    methods: {
+        handleToDetail(){
+            console.log('handleToDetail');
+        },
+        handleToScroll(pos){
+            if(pos.y>30){
+                this.pullDownMsg='正在更新中';
+            }
+        },
+        handleToTouchEnd(pos){
+            if(pos.y>30){
+                this.$axios.get('/api/movieComingList?cityId=10').then((res)=>{
+                    var msg=res.data.msg;
+                    if(msg==='ok'){
+                        this.pullDownMsg='更新成功';
+                        setTimeout(()=>{
+                            this.comingList=res.data.data.comingList;
+                            this.pullDownMsg='';
+                        },1000);
+                    }
+                });
+            }
+        }
     }
 }
 </script>
@@ -52,4 +92,6 @@ export default {
     .movie_body .info_list img{ width:50px; position: absolute; right:10px; top: 5px;}
     .movie_body .btn_mall , .movie_body .btn_pre{ width:47px; height:27px; line-height: 28px; text-align: center; background-color: #6a5acd; color: #fff; border-radius: 4px; font-size: 12px; cursor: pointer;}
     .movie_body .btn_pre{ background-color: #3c9fe6;}
+    .movie_body .pullDown {margin: 0;padding: 0;border: none;}
+    .movie_body .pullDown p{margin: 0 auto;text-align: center;}
 </style>

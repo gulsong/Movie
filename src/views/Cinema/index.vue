@@ -4,17 +4,17 @@
       <div id="content">
         <div class="cinema_menu">
           <router-link to="/cinema/ciList" custom v-slot="{ navigate,isActive,isExactActive }">
-            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="city_switch" @click="navigate">
+            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="city_switch" @touchstart="navigate">
               全城 <i class="iconfont icon-lower-triangle"></i>
             </div>
           </router-link>
           <router-link to="/cinema/brList" custom v-slot="{ navigate,isActive,isExactActive }">
-            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="brand_swtich" @click="navigate">
+            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="brand_swtich" @touchstart="navigate">
               品牌 <i class="iconfont icon-lower-triangle"></i>
             </div>
           </router-link>
           <router-link to="/cinema/feList" custom v-slot="{ navigate,isActive,isExactActive }">
-            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="feature_switch" @click="navigate">
+            <div :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']" class="feature_switch" @touchstart="navigate">
               特色 <i class="iconfont icon-lower-triangle"></i>
             </div>
           </router-link>
