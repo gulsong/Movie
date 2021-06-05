@@ -13,9 +13,9 @@
                         <h3>电影/电视剧/综艺</h3>
                         <ul>
                             <li v-for="item in moviesList" :key="item.id">
-                                <div class="img"><img :src="$filters.setWH(item.img,'128.180')"></div>
+                                <div class="img" @tap="handleToDetail(item.id)"><img :src="$filters.setWH(item.img,'128.180')"></div>
                                 <div class="info">
-                                    <p><span>{{item.nm}}</span><span>{{item.sc}}</span></p>
+                                    <p><span @tap="handleToDetail(item.id)">{{item.nm}}</span><span>{{item.sc}}</span></p>
                                     <p>{{item.enm}}</p>
                                     <p>{{item.cat}}</p>
                                     <p>{{item.rt}}</p>
@@ -39,6 +39,9 @@ export default {
         }
     },
     methods: {
+        handleToDetail(movieId){
+            this.$router.push('/movie/detail/3/'+movieId);
+        },
         cancelRequest(){
             if(typeof this.source==='function'){
                 this.source('终止请求')
