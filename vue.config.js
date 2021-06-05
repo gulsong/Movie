@@ -43,6 +43,13 @@ module.exports = {
                     '^/api/getLocation': '/data/getLocation.json'
                 }
             },
+            '/api/detailmovie': {
+                target: 'http://localhost:8080',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api/detailmovie': '/data/detailmovie.json'
+                }
+            },
             '/api': {
                 target: 'http://39.97.33.178',
                 changeOrigin: true

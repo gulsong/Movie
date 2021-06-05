@@ -10,7 +10,7 @@ const app = createApp(App);
 app.config.globalProperties.$axios = axios;
 app.config.globalProperties.$filters = {
     setWH(url, arg) {
-        return url.replace(/w\.h/, arg);
+        return String(url).replace(/w\.h/, arg);
     }
 }
 app.component('Scroller', Scroller);
